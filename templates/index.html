@@ -1,0 +1,23 @@
+{% block head %}
+
+{% endblock %}
+
+{%block content%}
+<ol>
+{% for review in reviews %}
+    <li>
+        <ol>
+            <li>
+                { {review.title} + "by" + {review.author}}
+             </li>
+
+             <li>
+                 {% if review.rating > 1%}
+                    {{review.rating} + "STARS!!"" 
+             </li>
+
+        </ol>
+    </li>
+{% endfor %}
+</ol>
+{% endblock %}
